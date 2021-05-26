@@ -2,15 +2,21 @@ using System;
 
 namespace exercicio__1.Classes
 {
-    public class Elevador
+    public class Elevador : ElevadorServico
     {
         private int AndarAtual = 0;
 
         private int NumAndares = 6;
 
-        private int Capacidade = 300;
+        public int Capacidade = 300;
 
         public int NumPessoas;
+
+        public void inicializada(){
+            Console.WriteLine($"\nLembre-se que o predio tem 6 andares e você sempre começara do Terreo!");
+            Console.WriteLine($"\nA capacidade dos elevadores sao de {Capacidade} KG");
+            
+        }
 
         public void Subir()
         {
@@ -21,7 +27,7 @@ namespace exercicio__1.Classes
 
                 Console.WriteLine("Qual andar você deseja ir ??");
                 andar = int.Parse(Console.ReadLine());
-                if (andar > 0 && andar <= 6)
+                if (andar >= 0 && andar <= 6)
                 {
                     
                     Console.WriteLine($"O elevador esta subindo para o { andar}° andar ");
@@ -42,10 +48,10 @@ namespace exercicio__1.Classes
             {
                 Console.WriteLine("Qual andar você deseja ir ??");
                 andar = int.Parse(Console.ReadLine());
-                if (andar > 0 && andar <= 6)
+                if (andar >= 0 && andar <= 6)
                 {
                     
-                    Console.WriteLine($"O elevador esta subindo para o { andar}° andar ");
+                    Console.WriteLine($"O elevador esta descendo para o { andar}° andar ");
                     AndarAtual =  andar;
 
                 }
@@ -56,6 +62,14 @@ namespace exercicio__1.Classes
                 }
             } while (andar <0 );
 
+
+        }
+
+        public void Sair(){
+            Console.WriteLine("Tem muita pessoa no elevador, pra segurança de vocês reduza o numero de pessoas!");
+        }
+        public void Entrar(){
+            Console.WriteLine("Adcione mais uma pessoa! O limite Maximo é de 6 Pessoas");
 
         }
     }

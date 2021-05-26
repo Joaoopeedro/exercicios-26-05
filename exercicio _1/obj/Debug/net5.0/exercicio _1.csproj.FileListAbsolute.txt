@@ -1,0 +1,16 @@
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\bin\Debug\net5.0\exercicio _1.exe
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\bin\Debug\net5.0\exercicio _1.deps.json
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\bin\Debug\net5.0\exercicio _1.runtimeconfig.json
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\bin\Debug\net5.0\exercicio _1.runtimeconfig.dev.json
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\bin\Debug\net5.0\exercicio _1.dll
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\bin\Debug\net5.0\ref\exercicio _1.dll
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\bin\Debug\net5.0\exercicio _1.pdb
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\exercicio _1.csprojAssemblyReference.cache
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\exercicio _1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\exercicio _1.AssemblyInfoInputs.cache
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\exercicio _1.AssemblyInfo.cs
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\exercicio _1.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\exercicio _1.dll
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\ref\exercicio _1.dll
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\exercicio _1.pdb
+C:\Users\user\Documents\backend_2-POO\exercicios_aula_26.05\exercicios-26-05\exercicio _1\obj\Debug\net5.0\exercicio _1.genruntimeconfig.cache
