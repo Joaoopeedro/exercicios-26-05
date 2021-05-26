@@ -7,18 +7,16 @@ namespace exercicio__1.Classes
         public int NumPessoas()
         {
             int numeroPe;
-            string adcionar;
+            string adcionar ="s";
             do
             {
-
-
                 Elevador e = new Elevador();
                 Console.WriteLine("Quantas pessoas tem no elevador??");
                 numeroPe = int.Parse(Console.ReadLine());
                 if (numeroPe > 6)
                 {
                     e.Sair();
-                    
+
                 }
                 if (numeroPe < 6)
                 {
@@ -26,16 +24,19 @@ namespace exercicio__1.Classes
                     adcionar = Console.ReadLine().ToLower();
                     if (adcionar == "s")
                     {
-                       e.Entrar(); 
+                        e.Entrar();
                     }
-
+                    else
+                    {
+                        Console.WriteLine("ok");
+                        adcionar = "n";
+                    }
                 }
-            } while (numeroPe > 6 );
-
+            } while (adcionar == "s") ;
             return numeroPe;
-            
         }
 
-
+    
     }
 }
+

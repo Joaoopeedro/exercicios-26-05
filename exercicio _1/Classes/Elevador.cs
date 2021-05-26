@@ -4,16 +4,21 @@ namespace exercicio__1.Classes
 {
     public class Elevador : ElevadorServico
     {
-        private int AndarAtual = 0;
+        private  int AndarAtual;
 
-        private int NumAndares = 6;
+        private int NumAndares ;
 
-        public int Capacidade = 300;
+        public int Capacidade{get; set;} 
 
-        public int NumPessoas;
+        public int NumPessoas{get; set;}
 
         public void inicializada(){
-            Console.WriteLine($"\nLembre-se que o predio tem 6 andares e você sempre começara do Terreo!");
+
+            Console.WriteLine($"\nQuantos andares tem o predio?");
+            NumAndares = int.Parse(Console.ReadLine());
+            Console.WriteLine($"\nLembre-se que o predio tem {NumAndares} andares e você sempre começara do Terreo!");
+            Console.WriteLine("\nQual a capacidade maxima dos elevadores ??");
+            Capacidade = int.Parse(Console.ReadLine());
             Console.WriteLine($"\nA capacidade dos elevadores sao de {Capacidade} KG");
             
         }
@@ -23,23 +28,19 @@ namespace exercicio__1.Classes
             int andar;
             do
             {
-
-
                 Console.WriteLine("Qual andar você deseja ir ??");
                 andar = int.Parse(Console.ReadLine());
-                if (andar >= 0 && andar <= 6)
-                {
-                    
+                if (andar <= NumAndares && andar > AndarAtual)
+                {         
                     Console.WriteLine($"O elevador esta subindo para o { andar}° andar ");
                     AndarAtual = andar;
-
+                    
                 }
                 else
                 {
-                    Console.WriteLine($"Numero de andar não existe!");
-
+                    Console.WriteLine($"\nNumero de andar não existe!");
                 }
-            } while (andar >6 );
+            } while (andar > AndarAtual );
         }
         public void Descer()
         { 
@@ -48,7 +49,7 @@ namespace exercicio__1.Classes
             {
                 Console.WriteLine("Qual andar você deseja ir ??");
                 andar = int.Parse(Console.ReadLine());
-                if (andar >= 0 && andar <= 6)
+                if (andar >= 0 && andar < AndarAtual)
                 {
                     
                     Console.WriteLine($"O elevador esta descendo para o { andar}° andar ");
@@ -60,7 +61,7 @@ namespace exercicio__1.Classes
                     Console.WriteLine($"Numero de andar não existe!");
 
                 }
-            } while (andar <0 );
+            } while (andar > AndarAtual );
 
 
         }

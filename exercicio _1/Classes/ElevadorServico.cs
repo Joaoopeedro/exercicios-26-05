@@ -19,9 +19,12 @@ namespace exercicio__1.Classes
                 {
                     Console.WriteLine("Você devera reduzir o numero de carga  , ULTRAPASSOU A CAPACIDADE !!");
 
+                }else{
+
+                    Console.WriteLine("ok");
                 }
-                return quantidade;
             } while (quantidade > 4);
+            return quantidade;
         }
     }
 }

@@ -13,10 +13,11 @@ namespace exercicio__1
             int andar;
             int elevador;
             int andar2;
+            
 
 
             Console.WriteLine("Olá seje bem vindo");
-            
+            e.inicializada();
             
             do
             {
@@ -34,7 +35,7 @@ QUAL ELEVADOR VOCÊ DESEJA UTILIZAR??
                 if (elevador == 1)
                 {
                     Console.WriteLine("\nVOCÊ ESTA USANDO O ELEVADOR DE SERVIÇO");
-                    e.inicializada();
+                    
                     es.AlterarCaixa();
                     Console.WriteLine("");
                     do
@@ -46,25 +47,30 @@ OQUE VOCÊ DESEJA FAZER??
 
 1- SUBIR
 2- DESCER 
+0- SAIR
 ");
                         andar = int.Parse(Console.ReadLine());
 
                         if (andar == 1)
                         {
-                            e.Descer();
+                            e.Subir();
                         }
-                        else
+                        else if (andar == 2)
                         {
                             e.Descer();
                             // Console.WriteLine("Este é o primeiro andar você nao consgue descer mais que isso!!");
                         }
-                    } while (andar != 2);
+                        else
+                        {
+                            Console.WriteLine("Você saiu do elevador!");
+                        }
+                    } while (andar != 0 );
 
                 }
-                if (elevador == 2)
+                else if (elevador == 2)
                 {
                     Console.WriteLine("\nVOCÊ ESTA USANDO O ELEVADOR SOCIAL");
-                    e.inicializada();
+                    
                     eo.NumPessoas();
                     do
                     {
@@ -75,6 +81,7 @@ OQUE VOCÊ DESEJA FAZER??
 
 1- SUBIR
 2- DESCER 
+0- SAIR
 ");
                         andar2 = int.Parse(Console.ReadLine());
 
@@ -86,10 +93,14 @@ OQUE VOCÊ DESEJA FAZER??
                         {
                             e.Descer();
                         }
+                        else if (andar2 == 0)
+                        {
+                            Console.WriteLine("Você saiu do elevador!");
+                        }
 
-                    } while (andar2 == 3);
+                    } while (andar2 != 0 );
                 }
-                if (elevador == 3)
+                else if (elevador == 3)
                 {
                     Console.WriteLine("Obrigado por utilizar nosso elevadores!!!");
                 }
@@ -97,7 +108,7 @@ OQUE VOCÊ DESEJA FAZER??
                 {
                     Console.WriteLine("\nOPÇÃO INVALIDA");
                 }
-            } while (elevador != 1 && elevador != 2 && elevador != 3);
+            } while (elevador == 1 || elevador == 2 || elevador != 3);
 
 
         }
