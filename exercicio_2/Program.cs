@@ -39,44 +39,32 @@ m- MEIO CAMPO
                     case "a":
                         JogadorAtaque ja = new JogadorAtaque();
                         ja.nome = nome;
-                        Console.WriteLine($"\nO nome do jogador é {ja.nome}");
                         ja.DataDeNascimento = DataDeNascimento;
-                        Console.WriteLine($"O ano de nascimento do jogador é {ja.DataDeNascimento}");
                         ja.nascionalidade = nascionalidade;
-                        Console.WriteLine($"A nascionalidade do jogador é {ja.nascionalidade}");
                         ja.altura = altura;
-                        Console.WriteLine($"A altura do jogador é de {ja.altura} m");
                         ja.peso = peso;
-                        Console.WriteLine($"O peso do jogador(a) é de {ja.peso} KG");
+                        ja.MostrarDados(ja.nome, ja.DataDeNascimento, ja.nascionalidade, ja.altura, ja.peso);
                         ja.Atacante();
 
                         break;
                     case "d":
                         JogadorDefesa jd = new JogadorDefesa();
                         jd.nome = nome;
-                        Console.WriteLine($"\nO nome do jogador é {jd.nome}");
                         jd.DataDeNascimento = DataDeNascimento;
-                        Console.WriteLine($"O ano de nascimento do jogador é {jd.DataDeNascimento}");
                         jd.nascionalidade = nascionalidade;
-                        Console.WriteLine($"A nascionalidade do jogador é {jd.nascionalidade}");
                         jd.altura = altura;
-                        Console.WriteLine($"A altura do jogador é de {jd.altura} m");
                         jd.peso = peso;
-                        Console.WriteLine($"O peso do jogador(a) é de {jd.peso} KG");
+                        jd.MostrarDados(jd.nome, jd.DataDeNascimento, jd.nascionalidade, jd.altura, jd.peso);
                         jd.Defesa();
                         break;
                     case "m":
                         JogadorMeioCampo jm = new JogadorMeioCampo();
                         jm.nome = nome;
-                        Console.WriteLine($"\nO nome do jogador é {jm.nome}");
                         jm.DataDeNascimento = DataDeNascimento;
-                        Console.WriteLine($"O ano de nascimento do jogador é {jm.DataDeNascimento}");
                         jm.nascionalidade = nascionalidade;
-                        Console.WriteLine($"A nascionalidade do jogador é {jm.nascionalidade}");
                         jm.altura = altura;
-                        Console.WriteLine($"A altura do jogador é de {jm.altura} m");
                         jm.peso = peso;
-                        Console.WriteLine($"O peso do jogador(a) é de {jm.peso} KG");
+                        jm.MostrarDados(jm.nome, jm.DataDeNascimento, jm.nascionalidade, jm.altura, jm.peso);
                         jm.MeioCampo();
                         break;
                     default:

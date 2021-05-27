@@ -1,5 +1,6 @@
 ﻿using System;
 using exercicio__1.Classes;
+using System.Threading;
 
 namespace exercicio__1
 {
@@ -13,12 +14,13 @@ namespace exercicio__1
             int andar;
             int elevador;
             int andar2;
-            
+           
+
 
 
             Console.WriteLine("Olá seje bem vindo");
             e.inicializada();
-            
+
             do
             {
 
@@ -35,7 +37,7 @@ QUAL ELEVADOR VOCÊ DESEJA UTILIZAR??
                 if (elevador == 1)
                 {
                     Console.WriteLine("\nVOCÊ ESTA USANDO O ELEVADOR DE SERVIÇO");
-                    
+
                     es.AlterarCaixa();
                     Console.WriteLine("");
                     do
@@ -64,13 +66,13 @@ OQUE VOCÊ DESEJA FAZER??
                         {
                             Console.WriteLine("Você saiu do elevador!");
                         }
-                    } while (andar != 0 );
+                    } while (andar != 0);
 
                 }
                 else if (elevador == 2)
                 {
                     Console.WriteLine("\nVOCÊ ESTA USANDO O ELEVADOR SOCIAL");
-                    
+
                     eo.NumPessoas();
                     do
                     {
@@ -88,10 +90,89 @@ OQUE VOCÊ DESEJA FAZER??
                         if (andar2 == 1)
                         {
                             e.Subir();
+                            Console.WriteLine($@"
+Alguem deseja sair??
+
+1- sim
+2- não");
+                            int sairPessoa = int.Parse(Console.ReadLine());
+                            if (sairPessoa == 1)
+                            {
+                                Console.WriteLine("Quantas pessoas vao sair ??");
+                                int pessoas = int.Parse(Console.ReadLine());
+                                if (pessoas > 0)
+                                {
+                                    Console.WriteLine($"O numero de pessoas que tem no elevadodor é de {eo.NumPessoas2 - pessoas} pessoas");
+                                    eo.NumPessoas2 = eo.NumPessoas2 - pessoas;
+                                    Console.WriteLine($@"
+Alguem deseja entrar? 
+
+1- sim
+2- nao
+");
+                                    int entrarPessoa = int.Parse(Console.ReadLine());
+                                    if (entrarPessoa == 1)
+                                    {
+                                        Console.WriteLine("Quantas pessoas vao entrar ??");
+                                        int pessoa2 = int.Parse(Console.ReadLine());
+                                        if (pessoa2 > 0)
+                                        {
+                                            Console.WriteLine($"O numero de pessoas que tem no elevadodor é de {eo.NumPessoas2 + pessoa2} pessoas");
+                                            eo.NumPessoas2 = eo.NumPessoas2 + pessoa2;
+                                            
+                                        }
+                                    }
+                                    else if (entrarPessoa == 2)
+                                    {
+                                        Console.WriteLine("ok");
+                                    }
+                                }
+                            }
+                            else if (sairPessoa == 2)
+                            {
+                                Console.WriteLine("ok");
+                            }
                         }
-                        else if(andar2 == 2)
+                        else if (andar2 == 2)
                         {
                             e.Descer();
+                            Console.WriteLine($@"
+Alguem deseja sair??
+
+1- sim
+2- não");
+                            int sairPessoa = int.Parse(Console.ReadLine());
+                            if (sairPessoa == 1)
+                            {
+                                Console.WriteLine("Quantas pessoas vao sair ??");
+                                int pessoas = int.Parse(Console.ReadLine());
+                                if (pessoas > 0)
+                                {
+                                    Console.WriteLine($"O numero de pessoas que tem no elevadodor é de {eo.NumPessoas2 - pessoas} pessoas");
+                                    eo.NumPessoas2 = eo.NumPessoas2 - pessoas;
+                                    Console.WriteLine($@"
+Alguem deseja entrar? 
+
+1- sim
+2- nao
+");
+                                    int entrarPessoa = int.Parse(Console.ReadLine());
+                                    if (entrarPessoa == 1)
+                                    {
+                                        Console.WriteLine("Quantas pessoas vao entrar ??");
+                                        int pessoa2 = int.Parse(Console.ReadLine());
+                                        if (pessoa2 > 0)
+                                        {
+                                            Console.WriteLine($"O numero de pessoas que tem no elevadodor é de {eo.NumPessoas2 + pessoa2} pessoas");
+                                            eo.NumPessoas2 = eo.NumPessoas2 + pessoa2;
+                                        }
+                                    }
+                                }
+                            }
+                            else if (sairPessoa == 2)
+                            {
+                                Console.WriteLine("ok");
+                            }
                         }
                         else if (andar2 == 0)
                         {
@@ -102,6 +183,7 @@ OQUE VOCÊ DESEJA FAZER??
                 }
                 else if (elevador == 3)
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Obrigado por utilizar nosso elevadores!!!");
                 }
                 else

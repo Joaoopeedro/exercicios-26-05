@@ -6,25 +6,23 @@ namespace exercicio__1.Classes
     {
         public int NumPessoas()
         {
-            int numeroPe;
             string adcionar ="s";
             do
             {
-                Elevador e = new Elevador();
                 Console.WriteLine("Quantas pessoas tem no elevador??");
-                numeroPe = int.Parse(Console.ReadLine());
-                if (numeroPe > 6)
+                this.NumPessoas2 = int.Parse(Console.ReadLine());
+                if (this.NumPessoas2 > 8)
                 {
-                    e.Sair();
+                    this.Sair();
 
                 }
-                if (numeroPe < 6)
+                if (this.NumPessoas2 < 7)
                 {
                     Console.WriteLine("Esta sobrando espaço, deseja adcionar mais alguma pessoa?(s/n)");
                     adcionar = Console.ReadLine().ToLower();
                     if (adcionar == "s")
                     {
-                        e.Entrar();
+                        this.Entrar();
                     }
                     else
                     {
@@ -33,7 +31,7 @@ namespace exercicio__1.Classes
                     }
                 }
             } while (adcionar == "s") ;
-            return numeroPe;
+            return this.NumPessoas2;
         }
 
     

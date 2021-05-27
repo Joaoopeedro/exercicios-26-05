@@ -1,26 +1,28 @@
 using System;
+using System.Threading;
 
 namespace exercicio__1.Classes
 {
     public class Elevador : ElevadorServico
     {
-        private  int AndarAtual;
+        private int AndarAtual;
 
-        private int NumAndares ;
+        private int NumAndares;
 
-        public int Capacidade{get; set;} 
+        public int Capacidade { get; set; }
 
-        public int NumPessoas{get; set;}
+        public int NumPessoas2 { get; set; }
 
-        public void inicializada(){
+        public void inicializada()
+        {
 
             Console.WriteLine($"\nQuantos andares tem o predio?");
             NumAndares = int.Parse(Console.ReadLine());
             Console.WriteLine($"\nLembre-se que o predio tem {NumAndares} andares e você sempre começara do Terreo!");
-            Console.WriteLine("\nQual a capacidade maxima dos elevadores ??");
+            Console.WriteLine("\nQual a capacidade maxima dos elevadores (KG) ??");
             Capacidade = int.Parse(Console.ReadLine());
             Console.WriteLine($"\nA capacidade dos elevadores sao de {Capacidade} KG");
-            
+
         }
 
         public void Subir()
@@ -31,46 +33,60 @@ namespace exercicio__1.Classes
                 Console.WriteLine("Qual andar você deseja ir ??");
                 andar = int.Parse(Console.ReadLine());
                 if (andar <= NumAndares && andar > AndarAtual)
-                {         
-                    Console.WriteLine($"O elevador esta subindo para o { andar}° andar ");
+                {
+                    Console.WriteLine($"O elevador esta subindo para o { andar}° andar, aguarde... ");
+                    Thread.Sleep(3000);
                     AndarAtual = andar;
-                    
+                    Console.WriteLine($"Você esta no {andar}° andar");
+
                 }
+                else if (andar == AndarAtual)
+                {
+                    Console.WriteLine("Você ja esta neste andar!!");
+                }
+                
                 else
                 {
                     Console.WriteLine($"\nNumero de andar não existe!");
                 }
-            } while (andar > AndarAtual );
+            } while (andar > AndarAtual);
         }
         public void Descer()
-        { 
+        {
             int andar;
-           do
+            do
             {
                 Console.WriteLine("Qual andar você deseja ir ??");
                 andar = int.Parse(Console.ReadLine());
                 if (andar >= 0 && andar < AndarAtual)
                 {
-                    
-                    Console.WriteLine($"O elevador esta descendo para o { andar}° andar ");
-                    AndarAtual =  andar;
 
+                    Console.WriteLine($"O elevador esta descendo para o { andar}° andar, aguarde... ");
+                    Thread.Sleep(3000);
+                    AndarAtual = andar;
+                    Console.WriteLine($"Você esta no {andar}° andar");
+                }
+                else if (andar == AndarAtual)
+                {
+                    Console.WriteLine("Você ja esta neste andar!!");
                 }
                 else
                 {
                     Console.WriteLine($"Numero de andar não existe!");
 
                 }
-            } while (andar > AndarAtual );
+            } while (andar > AndarAtual);
 
 
         }
 
-        public void Sair(){
+        public void Sair()
+        {
             Console.WriteLine("Tem muita pessoa no elevador, pra segurança de vocês reduza o numero de pessoas!");
         }
-        public void Entrar(){
-            Console.WriteLine("Adcione mais uma pessoa! O limite Maximo é de 6 Pessoas");
+        public void Entrar()
+        {
+            Console.WriteLine($"Adcione mais uma pessoa! O limite Maximo é de 7 Pessoas");
 
         }
     }
